@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const introSplash = document.querySelector('.intro-splash');
+
+  if (introSplash) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const finishIntro = () => {
+      introSplash.classList.add('is-hidden');
+      document.body.classList.remove('intro-active');
+      window.setTimeout(() => introSplash.remove(), prefersReducedMotion ? 0 : 1000);
+    };
+
+    if (prefersReducedMotion) {
+      finishIntro();
+    } else {
+      window.addEventListener('load', () => {
+        window.setTimeout(finishIntro, 1800);
+      });
+
+      window.setTimeout(finishIntro, 3500);
+    }
+  }
+
   const menuToggle = document.querySelector('.menu-toggle');
   const navOverlay = document.querySelector('.nav-overlay');
 
