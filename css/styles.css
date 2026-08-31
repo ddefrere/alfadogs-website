@@ -323,9 +323,10 @@ ul {
 .hero-bg {
   position: absolute;
   inset: 0;
+  background-color: #141414;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  transform: scale(1.02);
+  background-position: center center;
 }
 
 .hero-overlay {
