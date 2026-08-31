@@ -444,6 +444,10 @@ ul {
   background: var(--color-cream);
 }
 
+.section-white {
+  background: var(--color-white);
+}
+
 /* Split layout */
 .split {
   display: grid;
@@ -463,6 +467,19 @@ ul {
 .split-image {
   aspect-ratio: 4/5;
   overflow: hidden;
+  background: var(--color-dark);
+}
+
+.section-dark .split-image {
+  background: #141414;
+}
+
+#verhaal {
+  background: #000000;
+}
+
+#verhaal .split-image {
+  background: #000000;
 }
 
 .split-image img {
